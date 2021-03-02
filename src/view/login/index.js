@@ -80,7 +80,7 @@ function Login() {
         </div>
 
         <div className="opcoes-login">
-          <Link className="mx-2">
+          <Link to="/usuarioRecuperarSenha" className="mx-2">
             Recuperar Senha
           </Link>
           <span className="text-white">&#9733;</span>

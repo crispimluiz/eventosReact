@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 function Navbar() {
+  const dispatch = useDispatch();
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -20,7 +21,8 @@ function Navbar() {
                 <>
                   <li className="nav-item"><Link className="nav-link" to="/usuarionovo">Publicar Eventos</Link></li>
                   <li className="nav-item"><Link className="nav-link" to="/">Meus Eventos</Link></li>
-                  <li className="nav-item"><Link className="nav-link" to="/">Sair</Link></li>
+                  <li className="nav-item"><Link className="nav-link" onClick={() =>
+                    dispatch({ type: 'LOG_OUT' })}>Sair</Link></li>
                 </>
 
                 : //senão
